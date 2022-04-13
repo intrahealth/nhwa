@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
-  <id value="xxexample.fhir.uv.myig"/>
-<!--  <extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
-    <valueString value="resources-spreadsheet.xml"/>
-  </extension>-->
-  <url value="http://xxsomewhere.org/fhir/myig/ImplementationGuide/xxexample.fhir.uv.myig"/>
+  <id value="intrahealth.nhwa"/>
+  <url value="http://intrahealth.org/fhir/intrahealth.nhwa/ImplementationGuide/intrahealth.nhwa"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.1.0-test"/>
-  <name value="XXYourComputableMyIGNameHere"/>
-  <title value="xxYour User Friendly Name for MyIG Here"/>
+  <name value="NHWA"/>
+  <title value="National Health Workforce Accounts"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <publisher value="xxxYour Work Group"/>
+  <publisher value="IntraHealth International"/>
   <contact>
     <telecom>
       <!-- Or whatever URL and/or email address(es) are appropriate -->
@@ -20,7 +17,7 @@
       <value value="http://xxhl7.org/Special/committees/[something]"/>
     </telecom>
   </contact>
-  <description value="xxxA brief description of what this IG is about "/>
+  <description value="This is a draft FHIR IG for the National Workforce Accounts where the sources are FHIR resources."/>
   <jurisdiction>
     <!-- This will drive SNOMED release used -->
     <coding>
@@ -33,11 +30,33 @@
       -->
     </coding>
   </jurisdiction>
-  <packageId value="xxexample.fhir.uv.myig"/>
+  <packageId value="intrahealth.nhwa"/>
   <!-- This should be changed to 'not-open-source' or another license if appropriate for non-HL7-published content -->
   <license value="CC0-1.0"/>
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
   <fhirVersion value="4.0.1"/>
+  <!-- need this -->
+  <dependsOn id="sdc">
+    <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"/>
+    <packageId value="hl7.fhir.uv.sdc"/>
+    <version value="3.0.0"/>
+  </dependsOn>
+  <dependsOn id="cpg">
+    <uri value="http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg"/>
+    <packageId value="hl7.fhir.uv.cpg"/>
+    <version value="1.0.0"/>
+  </dependsOn>
+  <dependsOn id="cqfm">
+      <uri value="http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"/>
+      <packageId value="hl7.fhir.us.cqfmeasures"/>
+      <version value="current"/>
+  </dependsOn>
+  <dependsOn id="cqf">
+      <uri value="http://fhir.org/guides/cqf/ImplementationGuide/cqf.fhir.common"/>
+      <packageId value="cqf.fhir.common"/>
+      <version value="dev"/>
+  </dependsOn>
+
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
@@ -48,8 +67,8 @@
       <generation value="html"/>
       <page>
         <nameUrl value="index.html"/>
-        <title value="MyIG Home Page"/>
-        <generation value="html"/>
+        <title value="FHIR IG for NHWA"/>
+        <generation value="markdown"/>
       </page>
     <!-- change history page -->
       <page>
