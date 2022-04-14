@@ -10,3 +10,6 @@ include FHIRCommon version '4.0.1' called FC
 context Practitioner
 
 define "name": Practitioner.name.given[0].value
+
+// must go through encounter, something like this doesn't work
+// define "locations": Practitioner.practitionerRole.location.reference.reference

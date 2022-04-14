@@ -61,3 +61,12 @@ name=Mittens
 
 elapsed: 0.253 seconds
 
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/nhwa/input/tests/BasicPractitioner
+No terminology found at /Users/richard/src/github.com/intrahealth/nhwa/input/vocabulary/valueset. Evaluation may fail if terminology is required.
+cql-options not found. Using default options.
+Practitioner=Practitioner(id=Practitioner1)
+name=Mittens
+
+elapsed: 0.618 seconds
+
