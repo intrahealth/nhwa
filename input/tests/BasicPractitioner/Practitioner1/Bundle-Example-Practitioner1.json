@@ -30,6 +30,72 @@
           }
         ]
       }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/nhwa/Location/Location1",
+      "request": {
+        "url": "Location",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Location",
+        "id": "Location1",
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Location1"
+          }
+        ],
+        "managingOrganization": {
+          "identifier": {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization1"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/nhwa/Organization/Organization1",
+      "request": {
+        "url": "Organization",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization1",
+        "name": "Organization1 Government Hospital",
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "Organization1"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://intrahealth.github.io/nhwa/PractitionerRole/PractitionerRole1",
+      "request": {
+        "url": "PractitionerRole",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "PractitionerRole1",
+        "identifier": [
+          {
+            "system": "http://health.go.ug/national-identifier",
+            "value": "5555"
+          }
+        ],
+        "practitioner": {
+          "reference": "Practitioner/Practitioner1"
+        },
+        "location": [
+          {
+            "reference": "Location/Location1"
+          }
+        ]
+      }
     }
   ]
 }
