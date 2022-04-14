@@ -1,0 +1,35 @@
+{
+  "resourceType": "Bundle",
+  "id": "Example-Practitioner1",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "https://intrahealth.github.io/nhwa/Practitioner/Practitioner1",
+      "request": {
+        "url": "Practitioner",
+        "method": "POST"
+      },
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner1",
+        "name": [
+          {
+            "given": [
+              "Mittens"
+            ],
+            "family": "Cat",
+            "text": "Mittens Cat"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1985-01-01",
+        "identifier": [
+          {
+            "system": "http://health.go.ug/national-identifier",
+            "value": "1234"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+Running tests.
+No tests found at /Users/richard/src/github.com/intrahealth/nhwa/input/tests. Evaluation may fail if data is required.
+No terminology found at /Users/richard/src/github.com/intrahealth/nhwa/input/vocabulary/valueset. Evaluation may fail if terminology is required.
+cql-options not found. Using default options.
+Practitioner=null
+name=null
+
+elapsed: 0.333 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/nhwa/input/tests/BasicPractitioner
+No terminology found at /Users/richard/src/github.com/intrahealth/nhwa/input/vocabulary/valueset. Evaluation may fail if terminology is required.
+cql-options not found. Using default options.
+Practitioner=Practitioner(id=Practitioner1)
+name=[HumanName]
+
+elapsed: -0.568 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/nhwa/input/tests/BasicPractitioner
+No terminology found at /Users/richard/src/github.com/intrahealth/nhwa/input/vocabulary/valueset. Evaluation may fail if terminology is required.
+cql-options not found. Using default options.
+Practitioner=Practitioner(id=Practitioner1)
+name=[string]
+
+elapsed: 0.328 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/nhwa/input/tests/BasicPractitioner
+No terminology found at /Users/richard/src/github.com/intrahealth/nhwa/input/vocabulary/valueset. Evaluation may fail if terminology is required.
+cql-options not found. Using default options.
+Practitioner=Practitioner(id=Practitioner1)
+name=[Mittens]
+
+elapsed: 0.195 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/nhwa/input/tests/BasicPractitioner
+No terminology found at /Users/richard/src/github.com/intrahealth/nhwa/input/vocabulary/valueset. Evaluation may fail if terminology is required.
+cql-options not found. Using default options.
+Practitioner=Practitioner(id=Practitioner1)
+name=[string]
+
+elapsed: 0.194 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/nhwa/input/tests/BasicPractitioner
+No terminology found at /Users/richard/src/github.com/intrahealth/nhwa/input/vocabulary/valueset. Evaluation may fail if terminology is required.
+cql-options not found. Using default options.
+Practitioner=Practitioner(id=Practitioner1)
+name=[Mittens]
+
+elapsed: 0.208 seconds
+
+Running tests.
+Data path: /Users/richard/src/github.com/intrahealth/nhwa/input/tests/BasicPractitioner
+No terminology found at /Users/richard/src/github.com/intrahealth/nhwa/input/vocabulary/valueset. Evaluation may fail if terminology is required.
+cql-options not found. Using default options.
+Practitioner=Practitioner(id=Practitioner1)
+name=Mittens
+
+elapsed: 0.253 seconds
+

@@ -1,6 +1,8 @@
 Alias: $account-status = http://hl7.org/fhir/account-status/account-status
 // change
+Alias: $national-identifier = http://health.go.ug/national-identifier
 Alias: $base = https://intrahealth.github.io/nhwa
+
 Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
 Alias: $contract-party-role =  http://hl7.org/fhir/contract-party-role
