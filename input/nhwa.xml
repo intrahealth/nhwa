@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
-<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
+<ImplementationGuide xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
   <id value="intrahealth.nhwa"/>
-  <url value="http://intrahealth.org/fhir/intrahealth.nhwa/ImplementationGuide/intrahealth.nhwa"/>
+  <url value="https://intrahealth.github.io/nhwa/ImplementationGuide/intrahealth.nhwa"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.1.0-test"/>
   <name value="NHWA"/>
@@ -14,7 +15,7 @@
     <telecom>
       <!-- Or whatever URL and/or email address(es) are appropriate -->
       <system value="url"/>
-      <value value="http://xxhl7.org/Special/committees/[something]"/>
+      <value value="https://www.intrahealth.org"/>
     </telecom>
   </contact>
   <description value="This is a draft FHIR IG for the National Workforce Accounts where the sources are FHIR resources."/>
@@ -47,17 +48,42 @@
     <version value="1.0.0"/>
   </dependsOn>
   <dependsOn id="cqfm">
-      <uri value="http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"/>
-      <packageId value="hl7.fhir.us.cqfmeasures"/>
-      <version value="current"/>
+    <uri value="http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"/>
+    <packageId value="hl7.fhir.us.cqfmeasures"/>
+    <version value="current"/>
   </dependsOn>
   <dependsOn id="cqf">
-      <uri value="http://fhir.org/guides/cqf/ImplementationGuide/cqf.fhir.common"/>
-      <packageId value="cqf.fhir.common"/>
-      <version value="dev"/>
+    <uri value="http://fhir.org/guides/cqf/ImplementationGuide/cqf.fhir.common"/>
+    <packageId value="cqf.fhir.common"/>
+    <version value="dev"/>
   </dependsOn>
 
   <definition>
+
+    <resource>
+      <reference>
+        <reference value="Device/cqf-tooling"/>
+      </reference>
+      <name value="Device/cqf-tooling"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Library/FHIRHelpers"/>
+      </reference>
+      <name value="Library/FHIRHelpers"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Library/FHIRCommon"/>
+      </reference>
+      <name value="Library/FHIRCommon"/>
+      <description value="A simple example showing how examples are defined and referenced"/>
+    </resource>
+
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
     <page>
@@ -70,7 +96,7 @@
         <title value="FHIR IG for NHWA"/>
         <generation value="markdown"/>
       </page>
-    <!-- change history page -->
+      <!-- change history page -->
       <page>
         <nameUrl value="changes.html"/>
         <title value="IG Change History"/>
@@ -99,15 +125,16 @@
       <code value="path-resource"/>
       <value value="input\scenarios"/>
     </parameter>
-    <parameter>
+    <!-- remove for cqf tooling to work -->
+    <!-- <parameter>
       <code value="path-binary"/>
       <value value="input\cql"/>
-    </parameter>
+    </parameter> -->
     <parameter>
       <code value="path-liquid"/>
       <value value="templates\liquid"/>
     </parameter>
-<!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
+    <!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
     <parameter>
       <code value="excludexml"/>
       <value value="true"/>
